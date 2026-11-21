@@ -262,8 +262,8 @@
                 "text": "Aplikasi Pemindai"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -360,12 +360,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "4a2ea2d1-522f-4b77-a0ef-d6c89acca01b",
+                  "title": "Penyalahgunaan Sesi Login Petugas",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Penyerang menggunakan sesi login petugas yang dicuri atau disalahgunakan untuk menyamar sebagai petugas resmi dan melakukan validasi tiket tanpa izin.",
+                  "mitigation": "Menerapkan autentikasi yang kuat, membatasi masa berlaku sesi login, menggunakan token sesi yang aman, serta menyediakan fitur logout otomatis dan pencabutan sesi yang mencurigakan.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -467,7 +489,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -488,13 +511,32 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "9ce8a01a-eae1-4f19-b27e-662e5cea3e7f",
+                  "title": "Kebocoran Informasi Tiket melalui Penyebaran QR Code di Ruang Publik",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Peserta membagikan atau mengunggah tangkapan layar tiket yang berisi QR Code ke media sosial atau ruang publik. Pihak lain dapat melihat dan memperoleh informasi tiket tersebut, kemudian memanfaatkannya untuk mengetahui detail tiket atau mencoba menyalahgunakan tiket milik peserta.",
+                  "mitigation": "Memberikan peringatan kepada peserta agar tidak membagikan QR Code tiket kepada publik, menyamarkan informasi sensitif pada tampilan tiket, serta menggunakan token QR unik yang dapat diverifikasi dan hanya berlaku untuk satu kali check-in.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "tiket + QR"
@@ -508,7 +550,12 @@
               "cell": "f4438ad0-0ef3-411c-83b1-75ea40e61cb1",
               "port": "8f67e374-6fa4-49ae-aa26-035df6418911"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 390,
+                "y": -97
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -815,8 +862,16 @@
             },
             "vertices": [
               {
+                "x": 1400,
+                "y": -40
+              },
+              {
                 "x": 1370,
                 "y": -40
+              },
+              {
+                "x": 1340,
+                "y": -65
               }
             ]
           },
@@ -1294,8 +1349,8 @@
                 "text": "Portal Web"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1392,16 +1447,45 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "1cc733a5-3241-4bb1-a1ce-4fc66b56cb6a",
+                  "title": "Serangan Bot pada Registrasi Peserta",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Penyerang mengirimkan permintaan registrasi secara berulang melalui bot sehingga Portal Web mengalami kelebihan beban dan peserta kesulitan melakukan registrasi.",
+                  "mitigation": "Pembatasan jumlah permintaan registrasi (rate limiting), CAPTCHA, dan pemantauan aktivitas mencurigakan untuk mencegah penyalahgunaan layanan.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             },
             "children": [
               "698ae36d-9c61-4617-970e-b2e8e573f41e"
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
+            }
           },
           {
             "position": {
@@ -1517,7 +1601,11 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [],
+              "threatFrequency": {
+                "spoofing": 0,
+                "repudiation": 0
+              }
             },
             "children": [
               "d289397e-ba20-4ab8-b36b-0f4063551e75"
@@ -1640,6 +1728,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 2
+    "threatTop": 7
   }
 }
