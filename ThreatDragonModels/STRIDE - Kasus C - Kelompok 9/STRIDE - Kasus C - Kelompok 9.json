@@ -239,7 +239,7 @@
             "data": {
               "type": "tm.Actor",
               "name": "Petugas Pintu",
-              "description": "",
+              "description": "Petugas yang menggunakan Aplikasi Pemindai untuk memindai QR tiket peserta dan memeriksa hasil validasi sebelum memberikan akses masuk ke acara.",
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -356,7 +356,7 @@
             "data": {
               "type": "tm.Process",
               "name": "Aplikasi Pemindai",
-              "description": "",
+              "description": "Digunakan petugas untuk login dan memindai QR tiket, mengirim ID tiket serta sesi petugas ke Backend Tiket, dan menampilkan hasil validasi.",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -1271,7 +1271,7 @@
             "data": {
               "type": "tm.Actor",
               "name": "Admin Acara",
-              "description": "",
+              "description": "Pengelola acara yang menggunakan dashboard Portal Web untuk melihat ringkasan kehadiran dan memantau status check-in peserta.",
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -1388,7 +1388,7 @@
             "data": {
               "type": "tm.Process",
               "name": "Portal Web",
-              "description": "",
+              "description": "Menyediakan layanan registrasi peserta, menampilkan tiket ber-QR yang diterbitkan oleh Backend Tiket, serta dashboard bagi admin untuk melihat ringkasan kehadiran peserta.",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -1511,7 +1511,7 @@
             "data": {
               "type": "tm.Actor",
               "name": "Peserta",
-              "description": "",
+              "description": "Pengguna yang melakukan registrasi acara melalui Portal Web dan menerima tiket ber-QR sebagai bukti pendaftaran untuk memasuki acara.",
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
